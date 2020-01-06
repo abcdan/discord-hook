@@ -1,5 +1,5 @@
 {
-  "name": "discord-hook",
+  "name": "discord-hook-api",
   "version": "1.0.0",
   "description": "A Node.js Module to post to Discord Webhooks",
   "main": "index.js",

@@ -4,10 +4,14 @@ A Node.js Module to post to Discord Webhooks.
 # Examples
 Check the `example.js` in the `examples` folder
 
+# Installation
+Simply run
+`npm i discord-hook-api` or `yarn add discord-hook-api`
+
 # Documentation
 Put this somewhere on the top of your document
 ```js
-const { Hook, Embed } = require('discord-hook')
+const { Hook, Embed } = require('discord-hook-api')
 ```
 
 ## Hook Methods
