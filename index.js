@@ -6,7 +6,7 @@ const request = require('request')
 
 class Hook {
   constructor (url) {
-    if (arguments.length > 1) throw new Error('You can\'t pass one argument')
+    if (arguments.length > 1) throw new Error('You can only pass one argument')
     this.url = url
     this.tts = false
     this.embeds = []
@@ -18,7 +18,6 @@ class Hook {
   }
 
   addEmbed (embed) {
-    console.log(embed)
     if (this.embeds.length === 25) throw new Error('Max embeds reached, 25 max.')
     this.embeds.push(embed.data())
     return this
@@ -39,14 +38,13 @@ class Hook {
     return this
   }
 
-  setTts (value) {
-    if (typeof value !== 'boolean') throw new Error('setTts only accepts boolean')
-    this.tts = value
+  setTts () {
+    this.tts = true
     return this
   }
 
   send () {
-    if (!this.content) throw new Error('No content set, use setContent(content)')
+    if (!this.content && !this.embeds[0]) throw new Error('No content set, use setContent(content) or addEmbed(embed)')
     if (!this.url) throw new Error('No webhook URL set, use setHook(url)')
     if (!this.content.length > 2000) throw new Error('Content can only be up to 2000 characters')
 

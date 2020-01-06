@@ -58,9 +58,9 @@ new Hook()
   .setUsername(username)
 ```
 
-### `setTts(boolean)`
+### `setTts()`
 Want to make the webhook speak to all it's users, you can do it.
-<br>*Argument(s): boolean*
+<br>*Argument(s): none*
 ```js
 new Hook()
   .setTts(boolean)
