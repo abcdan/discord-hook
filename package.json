@@ -1,6 +1,6 @@
 {
   "name": "discord-hook-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Node.js Module to post to Discord Webhooks",
   "main": "index.js",
   "directories": {

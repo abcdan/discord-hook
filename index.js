@@ -29,6 +29,7 @@ class Hook {
   }
 
   setContent (content) {
+    if (!content.length > 2000) throw new Error('Content can only be up to 2000 characters')
     this.content = content
     return this
   }
@@ -46,7 +47,6 @@ class Hook {
   send () {
     if (!this.content && !this.embeds[0]) throw new Error('No content set, use setContent(content) or addEmbed(embed)')
     if (!this.url) throw new Error('No webhook URL set, use setHook(url)')
-    if (!this.content.length > 2000) throw new Error('Content can only be up to 2000 characters')
 
     const data = {
       content: this.content,
